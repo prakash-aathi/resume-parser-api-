@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+PyMuPDF
+python-docx
+python-dotenv
+langchain
+openai
+tiktoken
