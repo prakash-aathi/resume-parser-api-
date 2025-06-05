@@ -11,7 +11,7 @@ This project parses resumes to extract personal info, education, skills, project
 - FastAPI backend
 - Multiple endpoints based on priority
 - Logs, metadata (token count, processing time, cost estimate)
-- Supports deployment to production (e.g., AWS)
+- Supports deployment to production
 
 ---
 
@@ -25,29 +25,47 @@ cd resume-parser
 ```
 
 2. Create a virtual environment
-   
+```bash   
 python -m venv venv
-source venv/bin/activate  # For Linux/macOS
-venv\Scripts\activate     # For Windows
+```
+ # For Linux/macOS
+```bash   
+source venv/bin/activate 
+```
+
+# For Windows
+```bash   
+venv\Scripts\activate
+```
 
 3. Install requirements
+```bash   
 pip install -r requirements.txt
-
+```
 
 📦 .env File
 Create a .env file in the root directory:
 
+```bash   
 OPENAI_API_KEY=your_openai_api_key_here
+```
 
 ▶️ How to Start the API
+
+```bash   
 uvicorn app.main:app --reload
+```
+
 Once running, you can test your APIs at:
 
 📄 Swagger UI:
+```bash   
 http://localhost:8000/docs
+```
 
 
- API Endpoints
+ - API Endpoints
+   
 /parse-resume
 Extracts: personal info, skills, education
 
@@ -57,20 +75,21 @@ Extracts: projects, certifications, awards, languages
 /parse-third-priority
 Extracts: memberships, training, skilling, conference
 
-Each returns:
 
-structured JSON
-
-metadata like token usage, character count, estimated cost, and processing time
+- metadata like token usage, character count, estimated cost, and processing time
 
 🚀 Deployment (Basic Setup)
  Run on EC2 or Any Server
 Install Python, Git
 
-Clone repo, setup virtualenv
+- Clone repo, setup virtualenv
 
-Install requirements
+- Install requirements
+```bash   
+pip install -r requirements.txt
+```
 
-Run with:
-
+- Run with:
+```bash   
 uvicorn app.main:app --host 0.0.0.0 --port 80
+```
