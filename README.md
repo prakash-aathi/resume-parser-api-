@@ -50,7 +50,7 @@ Create a .env file in the root directory:
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-▶️ How to Start the API
+▶️ Start the API
 
 ```bash   
 uvicorn app.main:app --reload
@@ -79,16 +79,15 @@ Extracts: memberships, training, skilling, conference
 - metadata like token usage, character count, estimated cost, and processing time
 
 🚀 Deployment (Basic Setup)
- Run on EC2 or Any Server
+ Run on EC2 
 Install Python, Git
 
-- Clone repo, setup virtualenv
-
+- Clone repo
+- setup virtualenv
 - Install requirements
 ```bash   
 pip install -r requirements.txt
 ```
-
 - Run with:
 ```bash   
 uvicorn app.main:app --host 0.0.0.0 --port 80
